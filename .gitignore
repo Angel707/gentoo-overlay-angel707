@@ -1,0 +1,8 @@
+# ignore already added repository attributes
+profiles/repo_name
+metadata/layout.conf
+
+# vim
+.*.swp
+.*.swo
+
