@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE repositories SYSTEM "/dtd/repositories.dtd">
+<repositories xmlns="" version="1.0">
+  <repo quality="experimental" status="unofficial">
+    <name>angel707</name>
+    <description lang="en">Angel707 ebuilds -- Ebuilds for projects of personal interest</description>
+    <homepage>https://github.com/Angel707/gentoo-overlay-angel707</homepage>
+    <owner type="person">
+      <email>Angelos.Drossos@gmail.com</email>
+      <name>Angelos Drossos</name>
+    </owner>
+    <source type="git">https://github.com/Angel707/gentoo-overlay-angel707.git</source>
+    <feed>https://github.com/Angel707/gentoo-overlay-angel707/commits/master.atom</feed>
+  </repo>
+</repositories>
+
