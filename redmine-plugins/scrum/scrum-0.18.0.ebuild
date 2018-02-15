@@ -7,13 +7,15 @@ USE_RUBY="ruby22 ruby23"
 inherit eutils depend.apache ruby-ng user
 
 DESCRIPTION="Plugin to manage Scrum projects with Redmine"
-HOMEPAGE="https://redmine.ociotec.com/projects/redmine-plugin-scrum"
+HOMEPAGE="https://redmine.ociotec.com/projects/redmine-plugin-scrum https://www.redmine.org/plugins/scrum-plugin"
 SRC_URI="https://redmine.ociotec.com/attachments/download/476/scrum-v${PV}.tar.gz -> ${P}.tar.gz"
 
 KEYWORDS="~amd64"
 LICENSE="CC BY-ND 4.0"
 SLOT="0"
 IUSE=""
+
+DOCS="README.rdoc"
 
 # redmine support until 3.4
 ruby_add_bdepend "
@@ -25,15 +27,15 @@ REDMINE_PLUGINS_DIR="${REDMINE_DIR}/plugins"
 REDMINE_PLUGIN_DIR="${REDMINE_PLUGINS_DIR}/${PN}"
 
 all_ruby_prepare() {
-	# rename scrum to scrum-${PV} so that we don't need to redefine S
+	# rename ${PN} to ${P} so that we don't need to redefine S
 	if [[ -e ${PN} ]]; then
 		mv -f ${PN} ${P}
 	fi
 }
 
 all_ruby_install() {
-	dodoc README.rdoc
-	rm -r README.rdoc || die
+	dodoc ${DOCS}
+	rm -r ${DOCS} || die
 
 	insinto "${REDMINE_PLUGIN_DIR}"
 	doins -r .
