@@ -20,7 +20,13 @@ if [ "${PV}" = "9999" ]; then
 	SRC_URI=""
 	EGIT_CHECKOUT_DIR="${WORKDIR}/all"
 else
+	inherit git-r3
+	EGIT_REPO_URI="https://github.com/zapic0/deployer.git"
 	KEYWORDS="~amd64 ~arm ~x86"
+	SRC_URI=""
+	EGIT_BRANCH="master"
+	EGIT_COMMIT_DATE="${PV:0:4}-${PV:4:2}-${PV:6:2}"
+	EGIT_CHECKOUT_DIR="${WORKDIR}/all"
 fi
 
 DOCS="README.md README.rdoc"
