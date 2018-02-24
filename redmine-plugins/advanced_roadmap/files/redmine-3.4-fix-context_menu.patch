@@ -1,0 +1,36 @@
+diff --git a/app/views/milestones/show.html.erb b/app/views/milestones/show.html.erb
+index 76a9690..3267097 100644
+--- a/app/views/milestones/show.html.erb
++++ b/app/views/milestones/show.html.erb
+@@ -45,6 +45,6 @@
+ 
+ <% html_title(l(:label_roadmap)) %>
+ 
+-<%= context_menu issues_context_menu_path %>
++<%= context_menu %>
+ 
+ <%= render :partial => 'common/advanced_roadmap_footer' %>
+diff --git a/app/views/versions/index.html.erb b/app/views/versions/index.html.erb
+index 76b18c4..4eab2a2 100644
+--- a/app/views/versions/index.html.erb
++++ b/app/views/versions/index.html.erb
+@@ -41,6 +41,6 @@
+ 
+ <% html_title(l(:label_roadmap)) %>
+ 
+-<%= context_menu issues_context_menu_path %>
++<%= context_menu %>
+ 
+ <%= render :partial => 'common/advanced_roadmap_footer' %>
+diff --git a/app/views/versions/show.html.erb b/app/views/versions/show.html.erb
+index 07c03a5..6fff124 100644
+--- a/app/views/versions/show.html.erb
++++ b/app/views/versions/show.html.erb
+@@ -58,6 +58,6 @@
+ 
+ <% html_title @version.name %>
+ 
+-<%= context_menu issues_context_menu_path %>
++<%= context_menu %>
+ 
+ <%= render :partial => 'common/advanced_roadmap_footer' %>
